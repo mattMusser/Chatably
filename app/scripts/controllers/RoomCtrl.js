@@ -1,5 +1,6 @@
 (function() {
-    function RoomCtrl() {
+    function RoomCtrl(Room) {
+       
     }
 
     angular
