@@ -1,1 +1,8 @@
-<h1>Home Page</h1>
+<h1>Bloc Chat</h1>
+<main class="home-view">
+    <ol class="home-view-room-list">
+        <li class="home-view-room-item" ng-repeat="room in home.rooms track by $index">
+            {{ room.$value }}
+        </li>
+    </ol>
+</main>
