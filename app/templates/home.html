@@ -1,7 +1,8 @@
 <h1>Bloc Chat</h1>
 <main class="home-view">
-    <table class="home-view-room-list">
-        <tr class="home-view-room-item" ng-repeat="room in room.roomData">
-        </tr>
-    </table>
+    <ol class="home-view-room-list">
+        <li class="home-view-room-item" ng-repeat="room in home.rooms track by $index">
+            {{ room.$value }}
+        </li>
+    </ol>
 </main>
