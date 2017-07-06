@@ -1,15 +1,15 @@
 (function() {
     function ModalCtrl() {
         var openModal = function(room) {
-            this.createRoom = Room.addRoom();
+            this.openRoom = Room.$open(room);
         }
 
         var closeModal = function(room) {
-            this.closeRoom = 
+            this.closeRoom = room.$close(room);
         }
     }
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['firebase', 'angularjs', 'angular-animat', 'angular-touch', 'bootstrap.css', ModalCtrl]);
+        .controller('ModalCtrl', ['firebase', 'angularjs', 'angular-animate', 'angular-touch', 'bootstrap.css', ModalCtrl]);
 })();
