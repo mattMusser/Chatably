@@ -1,5 +1,5 @@
 (function() {
-    function ModalCtrl() {
+    function ModalCtrl($uibModal) {
         var openModal = function(room) {
             this.openRoom = Room.$open(room);
         }
