@@ -11,5 +11,5 @@
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['firebase', 'angularjs', 'angular-animate', 'angular-touch', 'bootstrap.css', ModalCtrl]);
+        .controller('ModalCtrl', ['firebase', 'angularjs', 'angular-animate', 'angular-touch', 'bootstrap.css','$uibModal' ModalCtrl]);
 })();
