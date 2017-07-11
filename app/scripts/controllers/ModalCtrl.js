@@ -1,7 +1,9 @@
 (function() {
     function ModalCtrl($uibModal) {
         var openModal = function(room) {
-            this.openRoom = Room.$open(room);
+            this.openRoom = home.open(room);
+            var roomPrompt= prompt("what");
+            this.addRoom = room.$add(roomPrompt);
         }
 
         var closeModal = function(room) {
