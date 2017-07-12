@@ -1,10 +1,18 @@
 (function() {
+    /*
+    * @function ModalCtrl
+    */
     function ModalCtrl($uibModal) {
+        /*
+        * @function openModal
+        */
         var openModal = function(room) {
             this.openRoom = room.$open(room);
-            var roomPrompt = prompt("what");
+            var roomPrompt = prompt("Add Room Name");
         }
-
+        /*
+        * @function closeModal
+        */
         var closeModal = function(room) {
             this.closeRoom = room.$close(room);
         }

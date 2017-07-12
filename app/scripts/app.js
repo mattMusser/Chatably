@@ -1,4 +1,7 @@
 (function() {
+    /**
+    * @function config
+    */
     function config($locationProvider, $stateProvider) {
         $locationProvider
             .html5Mode({
