@@ -5,6 +5,7 @@
     function ModalCtrl($uibModal) {
         /*
         * @function openModal
+        * @desc 
         */
         var openModal = function(room) {
             this.openRoom = $uibModal.open; //room.$open(room);
