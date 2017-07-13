@@ -4,8 +4,8 @@
     */
     function HomeCtrl(Room) {
         this.rooms = Room.all;
-        var roomPrompt = prompt("Add Room Name");
-        Room.addRoom(roomPrompt);
+        //var roomPrompt = prompt("Add Room Name");
+        Room.addRoom("the room");
     }
 
     angular

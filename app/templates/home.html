@@ -1,10 +1,9 @@
-<h1>Bloc Chat</h1>
 <main class="home-view">
+    <h1>Bloc Chat</h1>
     <ol class="home-view-room-list">
         <li class="home-view-room-item" ng-repeat="room in home.rooms track by $index">
             {{ room.$value }}
         </li>
     </ol>
     <button type="button" class="btn-default" ng-click="home.openModal()">New Room</button>
-
 </main>
