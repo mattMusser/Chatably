@@ -1,4 +1,4 @@
-(function() {
+(function($scope) {
     /**
     * @function HomeCtrl
     */
@@ -14,7 +14,7 @@
         var openModal = function() {
             $uibModal.open({
                 animation: true,
-                templateUrl: 'modal.html',
+                templateUrl: '/templates/modal.html',
                 controller: 'ModalCtrl.js',
             });
             console.log("Im being hit");
