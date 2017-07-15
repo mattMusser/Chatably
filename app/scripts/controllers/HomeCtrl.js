@@ -2,7 +2,7 @@
     /**
     * @function HomeCtrl
     */
-    function HomeCtrl(Room) {
+    function HomeCtrl(Room, $uibModal) {
         this.rooms = Room.all;
 
         Room.addRoom("a room");
@@ -11,12 +11,16 @@
         * @function openModal
         * @desc opens modal
         */
-        var openModal = function(room) {
-            this.openRoom = $uibModal.open; 
+        var openModal = function() {
+            $uibModal.open({
+                animation: true,
+                templateUrl: 'modal.html',
+                controller: 'ModalCtrl.js',
+            });
+            console.log("Im being hit");
         }
-
     }
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$uibModal', HomeCtrl]);
 })();

@@ -7,7 +7,7 @@
         * @function closeModal
         */
         var closeModal = function(room) {
-            this.closeRoom = $uibModal.close;
+             $uibModal.close;
         }
     }
 
