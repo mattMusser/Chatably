@@ -9,9 +9,16 @@
         var rooms = $firebaseArray(ref);
 
         Room.all = rooms;
-
+        /**
+        * @function Room.addRoom
+        * @desc adds room to database
+        */
         Room.addRoom = function(room) {
             rooms.$add(room);
+        }
+
+        Room.removeRoom = function(room) {
+            rooms.$remove(room);
         }
 
     return Room;
