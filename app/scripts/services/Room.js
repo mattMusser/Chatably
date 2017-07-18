@@ -1,7 +1,7 @@
 (function() {
     /**
     * @function Room
-    *
+    * @desc creates a list of chat rooms
     */
     function Room($firebaseArray) {
         var Room = {};

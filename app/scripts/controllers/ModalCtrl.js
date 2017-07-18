@@ -1,24 +1,29 @@
 (function() {
-    /*
+    /**
     * @function ModalCtrl
     */
-    function ModalCtrl($uibModal) {
-        /*
-        * @function openModal
-        */
-        var openModal = function(room) {
-            this.openRoom = room.$open(room);
-            var roomPrompt = prompt("Add Room Name");
-        }
-        /*
+    function ModalCtrl(Room, $uibModalInstance) {
+        /**
         * @function closeModal
+        * @desc closes the modal
         */
-        var closeModal = function(room) {
-            this.closeRoom = room.$close(room);
-        }
+        this.closeModal = function () {
+            console.log("cancel is being hit");
+            var modelInstance = $uibModalInstance.close('close');
+        };
+
+        /**
+        * @function addRoom
+        * @desc adds a new room to room list
+        */
+        this.addRoom = function() {
+            Room.addRoom(this.newRoomName);
+            this.newRoomName = "";
+            console.log("add room is being hit", this);
+        };
     }
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['firebase', 'angularjs', 'angular-animate', 'angular-touch', 'bootstrap.css','$uibModal', ModalCtrl]);
+        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
 })();

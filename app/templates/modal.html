@@ -1,13 +1,31 @@
 <main class="modal-view">
     <div class="modal-header">
+        <h2 class="modal-title">Create New Room</h2>
+    </div>
+    <form ng-submit="modal.addRoom()" class="form-group">
+        <h3 class="modal-form-header"><small>Enter a room name</small></h3>
+        <div class="form-group form-group-sm">
+            <input type="text" ng-model="modal.newRoomName" class="form-control" placeholder="Mos Eisley">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Add Room</button>
+            <button type="button" class="btn btn-danger" ng-click="modal.closeModal()">Cancel</button>
+        </div>
+    </form>
+</main>
+
+<!-- <main class="modal-view">
+    <div class="modal-header">
         <h2 class="modal-title">Create new room</h2>
     </div>
-    <section class="modal-room-name">
-        <h3 class="modal-section-header">Enter a room name</h3>
+    <form ng-submit="modal.addRoom()" class="modal-room-name">
+        <h3 class="modal-form-header"><small>Enter a room name</small></h3>
         <div class="modal-name-input">
-            <input type="text">
+            <input type="text" ng-model="modal.newRoomName">
         </div>
         <div class="modal-buttons">
+            <button type="submit" class="btn btn-add">Add Room</button>
+            <button type="button" class="btn btn-cancel" ng-click="modal.closeModal()">Cancel</button>
         </div>
-    </section>
-</main>
+    </form>
+</main> -->
