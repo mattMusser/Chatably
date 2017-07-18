@@ -1,17 +1,22 @@
-(function() {
-    /**
+(function($scope/*added*/) {
+    /** 
     * @function ModalCtrl
     */
-    function ModalCtrl($uibModal) {
+    function ModalCtrl(Room, modal, $uibModalInstance) {
         /**
         * @function closeModal
         */
-        var closeModal = function(room) {
-             $uibModal.close;
-        }
+        this.closeModal = function () {
+            var modelInstance = $uibModalInstance.close('close');
+            console.log("cancel is being hit");
+        };
+
+        Room.addRoom = function() {
+            console.log("add room is being hit");
+        };
     }
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['firebase', 'angularjs', 'angular-animate', 'angular-touch', 'bootstrap.css','$uibModal', ModalCtrl]);
+        .controller('ModalCtrl', ['$uibModalInstance', ModalCtrl]  /*['firebase', 'angularjs', 'angular-animate', 'angular-touch', 'bootstrap.css','$uibModal', ModalCtrl]*/);
 })();
