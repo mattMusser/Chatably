@@ -1,4 +1,4 @@
-(function($scope/*added*/) {
+(function() {
     /**
     * @function HomeCtrl
     */
@@ -23,7 +23,7 @@
         }*/
 
         this.openModal = function () {
-          var modalInstance = $uibModal.open({
+            $uibModal.open({
             animation: true,
             templateUrl: '/templates/modal.html',
             controller: 'ModalCtrl as modal',
