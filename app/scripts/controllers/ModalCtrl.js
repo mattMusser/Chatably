@@ -5,12 +5,17 @@
     function ModalCtrl(Room, $uibModalInstance) {
         /**
         * @function closeModal
+        * @desc closes the modal
         */
         this.closeModal = function () {
             console.log("cancel is being hit");
             var modelInstance = $uibModalInstance.close('close');
         };
 
+        /**
+        * @function addRoom
+        * @desc adds a new room to room list
+        */
         this.addRoom = function() {
             Room.addRoom(this.newRoomName);
             this.newRoomName = "";
@@ -20,5 +25,5 @@
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]  /*['firebase', 'angularjs', 'angular-animate', 'angular-touch', 'bootstrap.css','$uibModal', ModalCtrl]*/);
+        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
 })();
