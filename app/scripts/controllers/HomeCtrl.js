@@ -14,8 +14,9 @@
             animation: true,
             templateUrl: '/templates/modal.html',
             controller: 'ModalCtrl as modal',
-          });
+            });
         };
+
     }
     angular
         .module('blocChat')
