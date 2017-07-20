@@ -1,11 +1,14 @@
 <main class="home-view">
-    <section class="room-list">
-        <h1>Bloc Chat</h1>
+    <div class="room-list">
+        <h1 class="home-title">Bloc Chat</h1>
         <ol class="home-view-room-list">
             <li class="home-view-room-item" ng-repeat="room in home.rooms track by $index">
                 {{ room.$value }}
             </li>
         </ol>
         <button type="button" class="btn-default" ng-click="home.openModal()">New Room</button>
-    </section>
+    </div>
+    <div class="sidebar">
+        <h1 class="room-name">Test</h1>
+    </div>
 </main>

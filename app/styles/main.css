@@ -1,1 +1,11 @@
+.room-list {
+    background-color:grey;
+}
 
+.sidebar {
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 200px;
+    position: fixed;
+}
