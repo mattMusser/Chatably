@@ -5,8 +5,6 @@
     function HomeCtrl(Room, $uibModal) {
         this.rooms = Room.all;
 
-        //Room.addRoom("a room");
-
         /**
         * @function openModal
         * @desc opens modal
@@ -18,9 +16,6 @@
             controller: 'ModalCtrl as modal',
           });
         };
-
-        
-
     }
     angular
         .module('blocChat')
