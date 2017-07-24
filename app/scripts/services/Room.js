@@ -17,10 +17,6 @@
             rooms.$add(room);
         }
 
-        Room.removeRoom = function(room) {
-            rooms.$remove(room);
-        }
-
     return Room;
 
 }

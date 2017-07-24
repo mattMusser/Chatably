@@ -5,12 +5,9 @@
     function HomeCtrl(Room, $uibModal) {
         this.rooms = Room.all;
 
-        this.activeRoom = function(/*roomObject*/) {
-            this.currentRoom = /*roomObject*/;
-        }
         /**
         * @function openModal
-        * @desc opens modal
+        * @desc open modal click handler
         */
         this.openModal = function () {
             $uibModal.open({
@@ -19,6 +16,15 @@
             controller: 'ModalCtrl as modal',
             });
         };
+
+        /**
+        * @function activeRoom
+        * @desc active room click handler
+        */
+        this.activeRoom = function(rooms) {
+            this.currentRoom = rooms;
+            console.log("activeRoom is being hit");
+        }
 
     }
     angular

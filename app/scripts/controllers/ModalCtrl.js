@@ -13,11 +13,6 @@
             console.log("add room is being hit", this);
         };
 
-        this.removeRoom = function() {
-            Room.removeRoom(this.newRoomName);
-            var modelInstance = $uibModalInstance.close('close');
-        };
-
         /**
         * @function closeModal
         * @desc closes the modal
