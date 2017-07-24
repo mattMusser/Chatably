@@ -1,15 +1,16 @@
 <main class="modal-view">
-    <div class="modal-header">
-        <h2 class="modal-title">Create A New Room</h2>
-    </div>
-    <form ng-submit="modal.addRoom()" class="container-fluid">
-        <h3 class="modal-form-header"><small>Enter a room name</small></h3>
-        <div class="modal-name-input">
-            <input type="text" ng-model="modal.newRoomName" placeholder="Mos Eisley">
+    <form class="form-group">
+        <div class="modal-header">
+            <h2 class="modal-title">Create New Room</h2>
         </div>
-        <div class="modal-buttons">
-            <button type="submit" class="btn btn-success">Add Room</button>
-            <button type="button" class="btn btn-warning" ng-click="modal.removeRoom()">Remove Room</button>
+        <div class="modal-body" ng-submit="modal.addRoom()">
+            <h3 class="modal-form-header"><small>Enter a room name</small></h3>
+            <div class="form-group form-group-sm">
+                <input type="text" ng-model="modal.newRoomName" class="form-control" placeholder="Mos Eisley">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Add Room</button>
             <button type="button" class="btn btn-danger" ng-click="modal.closeModal()">Cancel</button>
         </div>
     </form>
