@@ -6,6 +6,9 @@
         this.rooms = Room.all;
         this.activeRoom = Room.activeRoom;
 
+        this.clickHandler. function(/*roomObject*/) {
+            this.currentRoom = /*roomObject*/;
+        }
         /**
         * @function openModal
         * @desc opens modal
