@@ -1,12 +1,11 @@
-(function() {
+ (function() {
     /**
     * @function HomeCtrl
     */
     function HomeCtrl(Room, $uibModal) {
         this.rooms = Room.all;
-        this.activeRoom = Room.activeRoom;
 
-        this.clickHandler. function(/*roomObject*/) {
+        this.activeRoom = function(/*roomObject*/) {
             this.currentRoom = /*roomObject*/;
         }
         /**
