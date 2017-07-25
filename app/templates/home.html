@@ -3,15 +3,15 @@
         <div class="col-md-2">
             <h1 class="home-title">Bloc Chat</h1>
             <ul class="home-view-room-list">
-                <li class="home-view-room-item" ng-repeat="room in home.rooms track by $index">
-                    <a class="room-name" ng-click="home.activeRoom(rooms)">{{ room.$value }}</a>
+                <li class="home-view-room-item" ng-repeat="currentRoom in home.rooms track by $index">
+                    <a class="room-name" ng-click="home.activeRoom(currentRoom)">{{ currentRoom.$value }}</a>
                 </li>
             </ul>
             <button type="button" class="btn-default" ng-click="home.openModal()"><b>New Room</b></button>
         </div>
         <div class="container">
             <div class="col-md-3">
-                <h3 class="room-name-header">{{ currentRoom.$value }}</h3>
+                <h3 class="room-name-header">{{ home.currentRoom.$value }}</h3>
             </div>
         </div>
     </div>

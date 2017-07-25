@@ -1,6 +1,8 @@
 (function() {
     /**
     * @function config
+    * @desc
+    * @returns
     */
     function config($locationProvider, $stateProvider) {
         $locationProvider

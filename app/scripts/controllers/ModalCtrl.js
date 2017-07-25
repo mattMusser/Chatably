@@ -1,11 +1,14 @@
 (function() {
     /**
     * @function ModalCtrl
+    * @desc
+    * @returns
     */
     function ModalCtrl(Room, $uibModalInstance) {
         /**
         * @function addRoom
         * @desc adds a new room to room list
+        * @returns
         */
         this.addRoom = function() {
             Room.addRoom(this.newRoomName);
@@ -16,6 +19,7 @@
         /**
         * @function closeModal
         * @desc closes the modal
+        * @returns
         */
         this.closeModal = function () {
             console.log("cancel is being hit");
