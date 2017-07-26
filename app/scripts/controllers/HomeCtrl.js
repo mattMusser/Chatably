@@ -31,11 +31,9 @@
             console.log("activeRoom is being hit");
         }
 
-        /*this.filteredMessages = function(roomId) {
-            this.messagesFiltered =  Message.getByRoomId();
-            console.log("messageFilter");
-        }*/
-
+        this.filteredMessages = function(rooms) {
+            this.messages = Message.sort(this.activeRoom.$id);
+        }
     }
     angular
         .module('blocChat')
