@@ -7,6 +7,7 @@
     function HomeCtrl(Room, Message, $uibModal) {
         this.rooms = Room.all;
 
+
         /**
         * @function openModal
         * @desc open modal click handler
