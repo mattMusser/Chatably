@@ -1,18 +1,13 @@
 (function() {
     /**
     * @function Room
-    * @desc creates a list of chat rooms
-    * @returns
+    * @desc creates a list of chat rooms.
+    * @returns rooms from Firebase.
     */
     function Room($firebaseArray) {
         var Room = {};
         var ref = firebase.database().ref().child("rooms");
         var rooms = $firebaseArray(ref);
-
-        Room.getRoomsMatchingName = function(nameToSearchFor) {
-            var filteredFirebaseRef = ref.orderByChild('$value').equalTo(nameToSearchFor);
-            return $firebaseArray(filteredFirebaseRef);
-        };
 
         Room.all = rooms;
         /**

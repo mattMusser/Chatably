@@ -4,7 +4,7 @@
     * @desc
     * @returns
     */
-    function HomeCtrl(Room, $uibModal) {
+    function HomeCtrl(Room, Message, $uibModal) {
         this.rooms = Room.all;
 
         /**
@@ -30,6 +30,11 @@
             this.currentRoom = rooms;
             console.log("activeRoom is being hit");
         }
+
+        /*this.filteredMessages = function(roomId) {
+            this.messagesFiltered =  Message.getByRoomId();
+            console.log("messageFilter");
+        }*/
 
     }
     angular
