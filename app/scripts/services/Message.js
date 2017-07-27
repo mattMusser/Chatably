@@ -15,9 +15,17 @@
         * @desc Filters messages by room id.
         * @returns the messages associated with the room id.
         */
+
+        /*Message.getByRoomId = function(roomId) {
+            var messageFilter = ref.orderByChild('roomId').equalTo(roomId);
+            return $firebaseArray(messageFilter);
+        };*/
+
         Message.sort = function (roomId) {
-            return $firebaseArray(ref.orderByChild('roomId').equalTo("-KpVG2DM4QotTEvyjpwI"));
-        };;
+            console.log($firebaseArray(ref.orderByChild('roomId').equalTo("KpVG2DM4QotTEvyjpwI")));
+            return $firebaseArray(ref.orderByChild('roomId').equalTo("KpVG2DM4QotTEvyjpwI"));
+            console.log($firebaseArray(ref.orderByChild('roomId').equalTo("KpVG2DM4QotTEvyjpwI")));
+        };
 
         return Message;
     }
