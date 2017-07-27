@@ -4,7 +4,7 @@
     * @desc
     * @returns
     */
-    function HomeCtrl(Room, Message, $uibModal) {
+    function HomeCtrl(Room, $uibModal, Message) {
         this.rooms = Room.all;
 
 
