@@ -34,6 +34,7 @@
 
         this.filteredMessages = function(rooms) {
             this.messages = Message.sort(this.activeRoom.$id);
+            console.log(this.messages);
         }
     }
     angular
