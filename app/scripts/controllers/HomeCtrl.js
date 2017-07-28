@@ -6,7 +6,7 @@
     */
     function HomeCtrl(Room, $uibModal, Message) {
         this.rooms = Room.all;
-
+        console.log(Message);
 
         /**
         * @function openModal
@@ -28,7 +28,7 @@
             console.log(rooms);
             this.currentRoom = rooms;
             console.log("activeRoom is being hit");
-        }
+        };
 
         /**
         * @function filteredMessages
