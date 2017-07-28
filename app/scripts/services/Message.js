@@ -29,7 +29,7 @@
 
         return Message;
     }
-
+    console.log(Message);
     angular
         .module('blocChat')
         .factory('Message', ['$firebaseArray', Message]);

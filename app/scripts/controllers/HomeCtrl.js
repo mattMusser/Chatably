@@ -4,9 +4,9 @@
     * @desc
     * @returns
     */
-    function HomeCtrl(Room, $uibModal, Message) {
+    function HomeCtrl(Room, Message, $uibModal) {
         this.rooms = Room.all;
-
+        console.log(Message);
 
         /**
         * @function openModal
@@ -24,18 +24,18 @@
         /**
         * @function activeRoom
         * @desc active room click handler
-        * @returns
+        * @returns the active room
         */
         this.activeRoom = function(rooms) {
             console.log(rooms);
             this.currentRoom = rooms;
             console.log("activeRoom is being hit");
-        }
+        };
 
-        this.filteredMessages = function(rooms) {
+        this.filteredMessages = function(roomId) {
             this.messages = Message.sort(this.activeRoom.$id);
             console.log(this.messages);
-        }
+        };
     }
     angular
         .module('blocChat')
