@@ -15,13 +15,10 @@
         * @returns the messages associated with the room id.
         */
         Message.getByRoomId = function(roomId) {
-            console.log($firebaseArray(ref.orderByChild('roomId').equalTo('$id')));
-            return $firebaseArray(ref.orderByChild('roomId').equalTo('$id'));
+            this.roomMessages = $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+            console.log('Message.getByRoomId this.roomMessages :', this.roomMessages);
+            return this.roomMessages;
         };
-
-        /*Message.sort = function (roomId) {
-            return $firebaseArray(ref.orderByChild('roomId').equalTo("KpVG2DM4QotTEvyjpwI"));
-        };*/
 
         return Message;
     }

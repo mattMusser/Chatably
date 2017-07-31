@@ -34,8 +34,8 @@
         * @desc
         */
         this.filteredMessages = function(rooms) {
-            this.allTheMessages = Message.getByRoomId(this.activeRoom.$id);
-            console.log(this.allTheMessages);
+            this.allTheMessages = Message.getByRoomId($id);
+            console.log('filteredMessages allTheMessages:', this.allTheMessages);
         };
 
         /*this.filteredMessages = function(rooms) {

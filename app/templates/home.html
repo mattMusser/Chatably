@@ -4,7 +4,7 @@
             <h1 class="home-title">Bloc Chat</h1>
             <ul class="home-view-room-list">
                 <li class="home-view-room-item" ng-repeat="currentRoom in home.rooms track by $index">
-                    <a class="room-name" ng-click="home.activeRoom(currentRoom)">{{ currentRoom.$value }}</a>
+                    <a class="room-name" ng-click="home.filteredMessages(currentRoom)">{{ currentRoom.$value }}</a>
                 </li>
             </ul>
             <button type="button" class="btn-default" ng-click="home.openModal()"><b>New Room</b></button>
