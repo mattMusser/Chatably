@@ -6,7 +6,6 @@
     */
     function HomeCtrl(Room, $uibModal, Message) {
         this.rooms = Room.all;
-        console.log(Message);
 
         /**
         * @function openModal
@@ -36,7 +35,7 @@
         */
         this.filteredMessages = function(rooms) {
             this.allTheMessages = Message.getByRoomId(this.activeRoom.$id);
-            console.log("this.allTheMessages" + this.allTheMessages);
+            console.log("this.allTheMessages");
         }
 
         /*this.filteredMessages = function(rooms) {
@@ -46,5 +45,5 @@
     }
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$uibModal', '$scope', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$uibModal', 'Message', HomeCtrl]);
 })();

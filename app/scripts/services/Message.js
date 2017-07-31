@@ -8,8 +8,8 @@
         var Message = {};
         var ref = firebase.database().ref().child("messages");
         var messages = $firebaseArray(ref);
-
-
+        console.log(Message);
+        console.log(messages);
         /**
         * @function Message.getByRoomId
         * @desc Filters messages by room id.
@@ -24,11 +24,9 @@
             return $firebaseArray(ref.orderByChild('roomId').equalTo("KpVG2DM4QotTEvyjpwI"));
         };*/
 
-
-
         return Message;
     }
-    console.log(Message);
+
     angular
         .module('blocChat')
         .factory('Message', ['$firebaseArray', Message]);
