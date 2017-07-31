@@ -8,16 +8,15 @@
         var Message = {};
         var ref = firebase.database().ref().child("messages");
         var messages = $firebaseArray(ref);
-        console.log(Message);
-        console.log(messages);
+
         /**
         * @function Message.getByRoomId
         * @desc Filters messages by room id.
         * @returns the messages associated with the room id.
         */
         Message.getByRoomId = function(roomId) {
-            console.log($firebaseArray(ref.orderByChild('roomId').equalTo(roomId)));
-            return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+            console.log($firebaseArray(ref.orderByChild('roomId').equalTo('$id')));
+            return $firebaseArray(ref.orderByChild('roomId').equalTo('$id'));
         };
 
         /*Message.sort = function (roomId) {
