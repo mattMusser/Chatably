@@ -7,5 +7,5 @@
 
     angular
         .module('blocChat')
-        .congroller('UsernameCtrl', ['BlocChatCookies', '$uibModalInstance', 'ngCookies', UsernameCtrl]);
+        .controller('UsernameCtrl', ['BlocChatCookies', '$uibModalInstance', 'ngCookies', UsernameCtrl]);
 })();
