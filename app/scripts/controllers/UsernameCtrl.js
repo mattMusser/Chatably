@@ -1,6 +1,8 @@
 (function() {
     function UsernameCtrl(BlocChatCookies, $uibModalInstance, ngCookies) {
-        
+        this.setUsername = function() {
+            BlocChatCookies.setUsername(this.newUsername);
+        }
     }
 
     angular

@@ -1,10 +1,10 @@
 (function() {
     /**
-    * @function ModalCtrl
+    * @function RoomCtrl
     * @desc
     * @returns
     */
-    function RoomCtrl(Room, $uibModalInstance, ngCookies) {
+    function RoomCtrl(Room, $uibModalInstance) {
         /**
         * @function addRoom
         * @desc adds a new room to room list
@@ -30,5 +30,5 @@
 
     angular
         .module('blocChat')
-        .controller('RoomCtrl', ['Room', '$uibModalInstance', 'ngCookies', RoomCtrl]);
+        .controller('RoomCtrl', ['Room', '$uibModalInstance', RoomCtrl]);
 })();

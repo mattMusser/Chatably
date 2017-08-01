@@ -7,6 +7,11 @@
                 templateUrl: '/templates/usernameModal.html',
                 controller: ' UsnernameCtrl as usernameModal,'
             });
+
+            BlocChatCookies.setUsername = function($cookies) {
+                currentUser = $cookies.put($cookies);
+            }
+
         }
     }
 

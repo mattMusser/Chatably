@@ -4,7 +4,7 @@
     * @desc
     * @returns
     */
-    function HomeCtrl(Room, $uibModal, Message, ngCookies) {
+    function HomeCtrl(Room, $uibModal, Message) {
         this.rooms = Room.all;
 
         /**
@@ -40,5 +40,5 @@
     }
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$uibModal', 'Message', 'ngCookies', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$uibModal', 'Message', HomeCtrl]);
 })();
