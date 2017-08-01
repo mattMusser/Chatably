@@ -1,1 +1,3 @@
-
+.alternative_cls:nth-child(odd){
+    background-color: orange;
+}

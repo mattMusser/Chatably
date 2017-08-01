@@ -13,7 +13,11 @@
             <div class="col-md-3">
                 <h3 class="room-name-header">{{ home.currentRoom.$value }}</h3>
                 <section class="message-section">
-                    <p>{{ home.allTheMessages }}</p>
+                    <div class="messages" ng-repeat="currentMessage in home.allTheMessages track by $index">
+                        <p class="alternative_cls">{{ currentMessage.username }}:  {{ currentMessage.content }}    <small>{{ currentMessage.sentAt }}</small></p>
+                    </div>
+                    <div ng-show="home.allTheMessages.length == 0"><b>No messages available</b></div>
+                    <div ng-show="home.allTheMessages.length == 0">Feel free to add your own messages</div>
                 </section>
             </div>
         </div>
