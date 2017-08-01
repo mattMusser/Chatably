@@ -14,8 +14,8 @@
         this.openModal = function () {
             $uibModal.open({
             animation: true,
-            templateUrl: '/templates/modal.html',
-            controller: 'ModalCtrl as modal',
+            templateUrl: '/templates/roomModal.html',
+            controller: 'RoomCtrl as roomModal',
             });
         };
 

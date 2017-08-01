@@ -4,7 +4,7 @@
     * @desc
     * @returns
     */
-    function ModalCtrl(Room, $uibModalInstance, ngCookies) {
+    function RoomCtrl(Room, $uibModalInstance, ngCookies) {
         /**
         * @function addRoom
         * @desc adds a new room to room list
@@ -23,12 +23,12 @@
         */
         this.closeModal = function () {
             console.log("cancel is being hit");
-            var modelInstance = $uibModalInstance.close('close');
+            var modalInstance = $uibModalInstance.close('close');
         };
     }
 
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', 'ngCookies', ModalCtrl]);
+        .controller('RoomCtrl', ['Room', '$uibModalInstance', 'ngCookies', RoomCtrl]);
 })();
