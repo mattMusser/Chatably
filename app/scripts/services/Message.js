@@ -1,4 +1,4 @@
-(function() {
+ (function() {
     /**
     * @function Message
     * @desc Message factory that defines all Message-ralated API queries.
