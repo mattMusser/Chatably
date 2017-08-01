@@ -24,8 +24,8 @@
         * @desc active room click handler
         */
         this.activeRoom = function(rooms) {
-            console.log(rooms);
             this.currentRoom = rooms;
+            this.allTheMessages = Message.getByRoomId(this.currentRoom.$id);
             console.log("activeRoom is being hit");
         };
 
@@ -34,14 +34,9 @@
         * @desc
         */
         this.filteredMessages = function(rooms) {
-            this.allTheMessages = Message.getByRoomId($id);
+            this.allTheMessages = Message.getByRoomId(this.activeRoom.$id);
             console.log('filteredMessages allTheMessages:', this.allTheMessages);
         };
-
-        /*this.filteredMessages = function(rooms) {
-            this.messages = Message.sort(this.activeRoom.$id);
-            console.log(this.messages);
-        }*/
     }
     angular
         .module('blocChat')
