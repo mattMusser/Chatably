@@ -3,12 +3,14 @@
         var currentUser = $cookies.get('blocChatCurrentUser');
         if (!currentUser || currentUser === '') {
             $uibModal.open({
-                animation: true,
+                keyboard: false,
+                backdrop: 'static',
                 templateUrl: '/templates/usernameModal.html',
                 controller: 'UsernameCtrl as usernameModal',
             });
 
             BlocChatCookies.setUsername = function($cookies) {
+                console.log("BlocChatCookies.setUsername currentUser = $cookies.put($cookies):", currentUser = $cookies.put($cookies));
                 currentUser = $cookies.put($cookies);
             }
 
