@@ -9,9 +9,9 @@
                 controller: 'UsernameCtrl as usernameModal',
             });
 
-            BlocChatCookies.setUsername = function($cookies) {
-                console.log("BlocChatCookies.setUsername currentUser = $cookies.put($cookies):", currentUser = $cookies.put($cookies));
-                currentUser = $cookies.put($cookies);
+            BlocChatCookies.setCurrentUser = function(setUsername) {
+                currentUser = Username.setUsername;
+                console.log("BlocChatCookies.setCurrentUser currentUser:", currentUser);
             }
 
         }

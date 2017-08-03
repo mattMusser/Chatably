@@ -10,6 +10,7 @@
         var rooms = $firebaseArray(ref);
 
         Room.all = rooms;
+        
         /**
         * @function Room.addRoom
         * @desc adds room to database
