@@ -5,9 +5,9 @@
         * @desc
         */
         this.setUsername = function() {
-            Username.setUsername = (username.newUsername);
-            username.newUsername = "";
-            console.log("this.setUsername Username.setUsername", this.newUsername);
+            UsernameCtrl.setUsername = this.newUsername;
+            console.log(this)
+            console.log("this.setUsername UsernameCtrl.setUsername", UsernameCtrl.setUsername);
         }
     }
 

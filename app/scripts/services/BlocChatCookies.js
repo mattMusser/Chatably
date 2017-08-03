@@ -6,15 +6,22 @@
                 keyboard: false,
                 backdrop: 'static',
                 templateUrl: '/templates/usernameModal.html',
-                controller: 'UsernameCtrl as usernameModal',
+                controller: 'UsernameCtrl as userName',
             });
 
             BlocChatCookies.setCurrentUser = function(setUsername) {
-                currentUser = Username.setUsername;
+                currentUser = $cookies.put(setUsername);
                 console.log("BlocChatCookies.setCurrentUser currentUser:", currentUser);
+                console.log("*inside if statment* $cookies:", $cookies);
             }
-
         }
+
+        /*BlocChatCookies.setCurrentUser = function(setUsername) {
+            currentUser = $cookies.put(setUsername);
+            console.log("BlocChatCookies.setCurrentUser currentUser:", currentUser);
+            console.log("$cookies:", $cookies);
+        }*/
+        console.log("$cookies:", $cookies);
     }
 
     angular
