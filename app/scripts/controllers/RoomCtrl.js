@@ -1,10 +1,10 @@
 (function() {
     /**
-    * @function ModalCtrl
+    * @function RoomCtrl
     * @desc
     * @returns
     */
-    function ModalCtrl(Room, $uibModalInstance) {
+    function RoomCtrl(Room, $uibModalInstance) {
         /**
         * @function addRoom
         * @desc adds a new room to room list
@@ -13,7 +13,6 @@
         this.addRoom = function() {
             Room.addRoom(this.newRoomName);
             this.newRoomName = "";
-            console.log("add room is being hit", this);
         };
 
         /**
@@ -22,13 +21,12 @@
         * @returns
         */
         this.closeModal = function () {
-            console.log("cancel is being hit");
-            var modelInstance = $uibModalInstance.close('close');
+            var modalInstance = $uibModalInstance.close('close');
         };
     }
 
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
+        .controller('RoomCtrl', ['Room', '$uibModalInstance', RoomCtrl]);
 })();

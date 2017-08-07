@@ -1,0 +1,17 @@
+<main class="modal-view">
+    <form class="form-group" ng-submit="roomModal.addRoom()">
+        <div class="modal-header">
+            <h2 class="modal-title">Create New Room</h2>
+        </div>
+        <div class="modal-body">
+            <h3 class="modal-form-header"><small>Enter a room name</small></h3>
+            <div class="form-group form-group-sm">
+                <input type="text" ng-model="roomModal.newRoomName" class="form-control" placeholder="Endor">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Add Room</button>
+            <button type="button" class="btn btn-danger" ng-click="roomModal.closeModal()">Cancel</button>
+        </div>
+    </form>
+</main>
