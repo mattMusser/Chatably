@@ -10,7 +10,7 @@
             console.log("this:", this);
             console.log("currentUser:", currentUser);
         }
-        console.log("currentUser:", currentUser);
+        //console.log("currentUser:", currentUser);
     }
 
     angular
