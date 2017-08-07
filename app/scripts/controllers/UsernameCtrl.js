@@ -1,19 +1,16 @@
 (function() {
-    function UsernameCtrl($cookies) {
+    function UsernameCtrl($cookies, $uibModalInstance) {
         /**
         * @function this.setUsername
         * @desc submission handler
         */
         this.setUsername = function() {
             currentUser = $cookies.put('blocChatCurrentUser', this.newUsername);
-            /*BCCookies.setCurrentUser(this.newUsername);*/
-            console.log("this:", this);
-            console.log("currentUser:", currentUser);
+            var modalInstance = $uibModalInstance.close('close');
         }
-        //console.log("currentUser:", currentUser);
     }
 
     angular
         .module('blocChat')
-        .controller('UsernameCtrl', ['$cookies', UsernameCtrl]);
+        .controller('UsernameCtrl', ['$cookies', '$uibModalInstance', UsernameCtrl]);
 })();

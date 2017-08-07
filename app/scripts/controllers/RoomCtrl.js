@@ -13,7 +13,6 @@
         this.addRoom = function() {
             Room.addRoom(this.newRoomName);
             this.newRoomName = "";
-            console.log("add room is being hit", this);
         };
 
         /**
@@ -22,7 +21,6 @@
         * @returns
         */
         this.closeModal = function () {
-            console.log("cancel is being hit");
             var modalInstance = $uibModalInstance.close('close');
         };
     }

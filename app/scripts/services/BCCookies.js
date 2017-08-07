@@ -9,13 +9,6 @@
                 controller: 'UsernameCtrl as userName',
             });
         }
-        console.log("currentUser:", currentUser);
-
-        /*BCCookies.setCurrentUser = function(setUsername) {
-            currentUser = $cookies.put(setUsername);
-            console.log("BCCookies.setCurrentUser currentUser:", currentUser);
-            console.log("$cookies:", $cookies);
-        }*/
     }
 
     angular
