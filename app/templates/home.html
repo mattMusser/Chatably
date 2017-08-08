@@ -18,6 +18,12 @@
                     </div>
                     <div ng-show="home.allTheMessages.length == 0"><b>No messages available</b></div>
                     <div ng-show="home.allTheMessages.length == 0">Feel free to add your own messages</div>
+                    <form class="form-group" ng-submit="home.submitMessage()">
+                        <div class="new-message-footer">
+                            <input type="text" ng-model="home.newMessage" class="form-control" placeholder="Type your message here...">
+                            <button type="submit" class="btn-primary">Send</button>
+                        </div>
+                    </form>
                 </section>
             </div>
         </div>

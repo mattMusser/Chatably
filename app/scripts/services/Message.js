@@ -10,14 +10,36 @@
         var messages = $firebaseArray(ref);
 
         /**
-        * @function Message.getByRoomId
+        * @function getByRoomId
         * @desc Filters messages by room id.
         * @returns the messages associated with the room id.
         */
         Message.getByRoomId = function(roomId) {
             this.roomMessages = $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
-            console.log('Message.getByRoomId this.roomMessages :', this.roomMessages);
             return this.roomMessages;
+        };
+
+        /**
+        ^ @function send
+        * @desc
+        * @returns
+        */
+        Message.send = function(newMessage) {
+            var date = new Date();
+            var month = date.getMonth();
+            var day = date.getDate();
+            var year = date.getFullYear();
+            var hrs = date.getHours() % 12;
+            var mins = date.getMinutes();
+
+            if(mins < 10) {
+                mins = "0" + min;
+            };
+
+            var timeDate = hrs + ':' + mins + " " + month + '/' + day + '/' + year;
+            newMessage.sentAt = timeDate;
+            console.log("Message.send newMessage:", newMessage);
+            messages.$add(newMessage);
         };
 
         return Message;
