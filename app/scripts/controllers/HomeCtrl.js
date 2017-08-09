@@ -1,9 +1,4 @@
  (function() {
-    /**
-    * @function HomeCtrl
-    * @desc
-    * @returns
-    */
     function HomeCtrl(Room, $uibModal, Message, $cookies) {
         this.rooms = Room.all;
         currentUser = $cookies.get('blocChatCurrentUser');
@@ -30,7 +25,7 @@
 
         /**
         * @function filteredMessages
-        * @desc
+        * @desc filters messages according to active room
         */
         this.filteredMessages = function(rooms) {
             this.allTheMessages = Message.getByRoomId(this.activeRoom.$id);
@@ -42,17 +37,12 @@
         */
         this.submitMessage = function() {
             Message.send({
-                roomId: this.currentRoom,
+                roomId: this.currentRoom.$id,
                 content: this.newMessage,
                 username: currentUser
             });
             this.newMessage = "";
         };
-        /*
-         why active room isn't coming through
-         pass along current user
-         make sure dates are saving in a good format for firebase
-        */
     }
     angular
         .module('blocChat')
