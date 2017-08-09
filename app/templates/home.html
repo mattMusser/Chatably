@@ -1,24 +1,38 @@
 <main class="home-view">
+    <div class="page-header">
+    <h1 class="home-title">Bloc Chat <small>Have a chat</small></h1>
+    </div>
     <div class="row">
         <div class="col-md-2">
-            <h1 class="home-title">Bloc Chat</h1>
-            <ul class="home-view-room-list">
-                <li class="home-view-room-item" ng-repeat="currentRoom in home.rooms track by $index">
-                    <a class="room-name" ng-click="home.activeRoom(currentRoom)">{{ currentRoom.$value }}</a>
+            <div class="list-group">
+                <li class="list-group-item" ng-repeat="currentRoom in home.rooms track by $index">
+                    <a class="list-group-item" ng-click="home.activeRoom(currentRoom)">{{ currentRoom.$value }}</a>
                 </li>
-            </ul>
+            </div>
             <button type="button" class="btn-default" ng-click="home.openModal()"><b>New Room</b></button>
         </div>
-        <div class="container">
-            <div class="col-md-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
                 <h3 class="room-name-header">{{ home.currentRoom.$value }}</h3>
-                <section class="message-section">
-                    <div class="messages" ng-repeat="currentMessage in home.allTheMessages track by $index">
-                        <p class="alternative_cls">{{ currentMessage.username }}:  {{ currentMessage.content }}    <small>{{ currentMessage.sentAt }}</small></p>
-                    </div>
-                    <div ng-show="home.allTheMessages.length == 0"><b>No messages available</b></div>
-                    <div ng-show="home.allTheMessages.length == 0">Feel free to add your own messages</div>
-                </section>
+                    <section class="message-section">
+                        <div class="messages" ng-repeat="currentMessage in home.allTheMessages track by $index">
+                            <p class="alternative_cls">{{ currentMessage.username }}:  {{ currentMessage.content }}    <small>{{ currentMessage.sentAt }}</small></p>
+                        </div>
+                        <div ng-show="home.allTheMessages.length == 0"><b>No messages available</b></div>
+                        <div ng-show="home.allTheMessages.length == 0">Feel free to add your own messages</div>
+                        <form class="form-group" ng-submit="home.submitMessage()">
+                        <div class="new-message-footer">
+                            <div class="input-group">
+                                <input type="text" ng-model="home.newMessage" class="form-control" placeholder="Type your message here...">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-primary" type="button">Send</button>
+                                </span>
+                            </div>
+                        </div>
+                        </form>
+                    </section>
+                </div>
             </div>
         </div>
     </div>

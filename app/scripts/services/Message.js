@@ -9,15 +9,54 @@
         var ref = firebase.database().ref().child("messages");
         var messages = $firebaseArray(ref);
 
+
         /**
-        * @function Message.getByRoomId
+        * @function getByRoomId
         * @desc Filters messages by room id.
         * @returns the messages associated with the room id.
         */
         Message.getByRoomId = function(roomId) {
             this.roomMessages = $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
-            console.log('Message.getByRoomId this.roomMessages :', this.roomMessages);
             return this.roomMessages;
+        };
+
+        /**
+        * @function sentAtFormatter
+        * @desc Formats the time and date when message was sent
+        * @returns timeDate
+        */
+        sentAtFormatter = function() {
+            var date = new Date();
+            var month = date.getMonth();
+            var day = date.getDate();
+            var year = date.getFullYear();
+            var hrs = date.getHours() % 12;
+            var mins = date.getMinutes();
+            var amPm = hrs >= 12 ? 'am' : 'pm';
+
+            if(mins < 10) {
+                mins = "0" + mins;
+            };
+
+            if(month | day < 10) {
+                month = "0" + month;
+                day = "0" + day;
+            }
+
+            var timeDate = hrs + ':' + mins + amPm +" " + month + '/' + day + '/' + year;
+
+            return timeDate
+        }
+
+        /**
+        ^ @function send
+        * @desc Adds message to firebase
+        */
+        Message.send = function(newMessage) {
+            newMessage.sentAt = sentAtFormatter();
+            console.log("Message.send newMessage:", newMessage);
+            messages.$add(newMessage);
+
         };
 
         return Message;
