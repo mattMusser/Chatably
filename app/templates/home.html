@@ -23,7 +23,7 @@
                         <div ng-show="home.allTheMessages.length == 0">Feel free to add your own messages</div>
                         <form class="form-group" ng-submit="home.submitMessage()">
                         <div class="new-message-footer">
-                            <div class="input-group">
+                            <div ng-show="home.currentRoom.$value != null" class="input-group">
                                 <input type="text" ng-model="home.newMessage" class="form-control" placeholder="Type your message here...">
                                 <span class="input-group-btn">
                                     <button type="submit" class="btn btn-primary" type="button">Send</button>
