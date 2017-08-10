@@ -1,11 +1,7 @@
 .alternative_cls:nth-child(odd){
-    background-color: orange;
+    background-color: #f0ad4e;
 }
 
-.page-header {
-    background-color: #337ab7;
-}
-
-.container {
-    background-color: lightgrey;
+.messages .container {
+    background-color: #5bc0de;
 }
