@@ -2,6 +2,11 @@
     background-color: #f0ad4e;
 }
 
-.messages .container {
+header {
+    background-color: #337ab7;
+}
+
+.container {
     background-color: #5bc0de;
+    width: 80%;
 }
