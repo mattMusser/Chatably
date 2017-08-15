@@ -1,13 +1,15 @@
 <main class="home-view">
-<header class="page-header">
-    <h1 class="home-title">Bloc Chat</h1>
-</header>
-<body>
-    <div class="col-xs-4 col-md-2">
-        <div class="list-group">
-            <li class="list-group-item" ng-repeat="currentRoom in home.rooms track by $index">
-                <a class="list-group-item" ng-click="home.activeRoom(currentRoom)">{{ currentRoom.$value }}</a>
-            </li>
+    <div class="page-header">
+    <h1 class="home-title">Bloc Chat <small class="subtitle">Have a chat</small></h1>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="list-group">
+                <li class="list-group-item" ng-repeat="currentRoom in home.rooms track by $index">
+                    <a class="list-group-item" ng-click="home.activeRoom(currentRoom)">{{ currentRoom.$value }}</a>
+                </li>
+            </div>
+            <button type="button" class="btn-default" ng-click="home.openModal()"><b>New Room</b></button>
         </div>
         <button type="button" class="btn-default" ng-click="home.openModal()"><b>New Room</b></button>
     </div>

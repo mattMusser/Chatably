@@ -6,6 +6,10 @@ header {
     background-color: #337ab7;
 }
 
+.subtitle {
+    color: white;
+}
+
 .container {
     background-color: #5bc0de;
     width: 80%;
