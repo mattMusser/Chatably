@@ -3,16 +3,16 @@
       <span class="h1" class="navbar-brand mb-0">Bloc Chat</span>
     </nav>
     <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
-            <div class="list-group">
-                <li class="list-group-item" ng-repeat="currentRoom in home.rooms track by $index">
-                    <a class="list-group-item" ng-click="home.activeRoom(currentRoom)">{{ currentRoom.$value }}</a>
-                </li>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="list-group">
+                    <li class="list-group-item" ng-repeat="currentRoom in home.rooms track by $index">
+                        <a class="list-group-item" ng-click="home.activeRoom(currentRoom)">{{ currentRoom.$value }}</a>
+                    </li>
+                </div>
+                <button type="button" class="btn btn-info" ng-click="home.openModal()"><b>New Room</b></button>
             </div>
-            <button type="button" class="btn btn-info" ng-click="home.openModal()"><b>New Room</b></button>
         </div>
-    </div>
     </div>
     <div class="container">
         <div class="row">
