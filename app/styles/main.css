@@ -1,15 +1,25 @@
 .alternative_cls:nth-child(odd){
-    background-color: orange;
+    background-color: white;
 }
 
-.page-header {
-    background-color: #337ab7;
+.navbar {
+    padding: 10px;
 }
 
-.subtitle {
+.h1 {
     color: white;
+    padding: 20px;
 }
 
-.container {
-    background-color: lightgrey;
+.container{
+    background-color: #5bc0de;
+    padding: 50px;
+}
+
+.list-group-item {
+    cursor:pointer;
+}
+
+.list-group-item:hover {
+    background-color: #428bca;
 }
