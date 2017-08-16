@@ -12,6 +12,16 @@
                 </div>
                 <button type="button" class="btn btn-info" ng-click="home.openModal()"><b>New Room</b></button>
             </div>
+            <form class="form-group" ng-submit="home.submitMessage()">
+                <div class="new-message-footer">
+                    <div ng-show="home.currentRoom.$value != null" class="input-group">
+                        <input type="text" ng-model="home.newMessage" class="form-control" placeholder="Type your message here..." required>
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-primary" type="button">Send</button>
+                        </span>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <div class="container">
@@ -24,18 +34,18 @@
                         </div>
                         <div ng-show="home.allTheMessages.length == 0"><b>No messages available</b></div>
                         <div ng-show="home.allTheMessages.length == 0">Feel free to add your own messages</div>
-                        <form class="form-group" ng-submit="home.submitMessage()">
-                        <div class="new-message-footer">
-                            <div ng-show="home.currentRoom.$value != null" class="input-group">
-                                <input type="text" ng-model="home.newMessage" class="form-control" placeholder="Type your message here...">
-                                <span class="input-group-btn">
-                                    <button type="submit" class="btn btn-primary" type="button">Send</button>
-                                </span>
-                            </div>
-                        </div>
-                        </form>
                     </section>
                 </div>
+                <!--<form class="form-group" ng-submit="home.submitMessage()">
+                    <div class="new-message-footer">
+                        <div ng-show="home.currentRoom.$value != null" class="input-group">
+                            <input type="text" ng-model="home.newMessage" class="form-control" placeholder="Type your message here...">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-primary" type="button">Send</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>-->
             </div>
         </div>
     </div>
