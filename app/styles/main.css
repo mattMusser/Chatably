@@ -1,11 +1,41 @@
 .alternative_cls:nth-child(odd){
-    background-color: orange;
+    background-color: white;
 }
 
-.page-header {
-    background-color: #337ab7;
+.navbar {
+    padding: 10px;
+}
+
+.h1 {
+    color: white;
 }
 
 .container {
-    background-color: lightgrey;
+    position: relative;
+    left: 20px;
+    bottom: 833px;
+}
+
+.col-md-6 {
+    background-color: #428bca;
+    padding: 10px;
+}
+
+.list-group-item {
+    cursor:pointer;
+}
+
+.list-group-item:hover {
+    background-color: #428bca;
+}
+
+.room-name-header {
+    color: white;
+}
+
+.input-group {
+    padding-left: 315px;
+    padding-right: 15px;
+    position: absolute;
+    bottom: 135px;
 }
