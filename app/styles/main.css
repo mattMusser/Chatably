@@ -2,15 +2,16 @@
     background-color: white;
 }
 
-.navbar {
+/*.navbar {
     padding: 10px;
-}
+}*/
 
 .h1 {
     color: white;
 }
 
-.container {
+
+/*.container {
     position: relative;
     left: 20px;
     bottom: 833px;
@@ -19,7 +20,13 @@
 .col-md-6 {
     background-color: #428bca;
     padding: 10px;
+}*/
+
+.col-md-6 {
+    background-color: #428bca;
+    padding-bottom: 5px;
 }
+
 
 .list-group-item {
     cursor:pointer;
@@ -33,9 +40,13 @@
     color: white;
 }
 
-.input-group {
+.form-group {
+    padding-right: 5px;
+}
+
+/*.input-group {
     padding-left: 315px;
     padding-right: 15px;
     position: absolute;
     bottom: 135px;
-}
+}*/
