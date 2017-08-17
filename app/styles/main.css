@@ -2,25 +2,9 @@
     background-color: white;
 }
 
-/*.navbar {
-    padding: 10px;
-}*/
-
 .h1 {
     color: white;
 }
-
-
-/*.container {
-    position: relative;
-    left: 20px;
-    bottom: 833px;
-}
-
-.col-md-6 {
-    background-color: #428bca;
-    padding: 10px;
-}*/
 
 .col-md-6 {
     background-color: #428bca;
@@ -43,10 +27,3 @@
 .form-group {
     padding-right: 5px;
 }
-
-/*.input-group {
-    padding-left: 315px;
-    padding-right: 15px;
-    position: absolute;
-    bottom: 135px;
-}*/
