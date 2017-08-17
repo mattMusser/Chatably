@@ -12,12 +12,12 @@
 
 .container {
     position: relative;
-    left: 100px;
+    left: 20px;
     bottom: 833px;
 }
 
 .col-md-6 {
-    background-color: #5bc0de;
+    background-color: #428bca;
     padding: 10px;
 }
 
@@ -29,9 +29,13 @@
     background-color: #428bca;
 }
 
-.new-message-footer {
-    padding-left: 250px;
+.room-name-header {
+    color: white;
+}
+
+.input-group {
+    padding-left: 315px;
     padding-right: 15px;
     position: absolute;
-    top: 880px;
+    bottom: 135px;
 }
