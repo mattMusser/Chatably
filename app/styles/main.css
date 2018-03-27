@@ -11,6 +11,10 @@
     padding-bottom: 5px;
 }
 
+.list-group {
+    box-shadow: 10px 0 20px rgb(128, 128, 128, .2);
+}
+
 
 .list-group-item {
     cursor:pointer;
@@ -26,4 +30,8 @@
 
 .form-group {
     padding-right: 5px;
+}
+
+.message-box {
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.2);
 }

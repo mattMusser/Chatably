@@ -17,7 +17,7 @@
                 <button type="button" class="btn btn-primary" ng-click="home.openModal()"><b>New Room</b></button>
             </div>
 
-            <div class="col-md-6" ng-show="home.currentRoom.$value != null">
+            <div class="col-md-6 message-box" ng-show="home.currentRoom.$value != null">
                 <div class="message-section">
                     <h3 class="room-name-header">{{ home.currentRoom.$value }}</h3>
                         <div class="messages" ng-repeat="currentMessage in home.allTheMessages track by $index">
