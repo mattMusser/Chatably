@@ -1,6 +1,6 @@
 # Chatably
 
-Bloc Chat is a web-based chat room for friends to talk with each other. The app was built with purely front-end technology. Firebase provided the back-end with a no-sql database. Using AngularJS the app works in real time communicating with Firebase to listening devices.
+Chatably is a web-based chat room for friends to talk with each other. The app was built with purely front-end technology. Firebase provided the back-end with a no-sql database. Using AngularJS the app works in real time communicating with Firebase to listening devices.
 
 When creating this application the chief issue was to build this project using only JavaScript. Frameworks can be used but no back-end languages could be used in the application itself.
 
