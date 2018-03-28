@@ -1,4 +1,4 @@
-# Bloc Chat
+# Chatably
 
 Bloc Chat is a web-based chat room for friends to talk with each other. The app was built with purely front-end technology. Firebase provided the back-end with a no-sql database. Using AngularJS the app works in real time communicating with Firebase to listening devices.
 
